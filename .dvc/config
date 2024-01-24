@@ -1,0 +1,4 @@
+[core]
+    remote = remote_storage
+['remote "remote_storage"']
+    url = /Users/moutazelias/Desktop/Desktop/Education/datacamp/DVC/dvc_remote
