@@ -1,6 +1,6 @@
 stages:
   prepare:
-    cmd: python src/prepare.py
+    cmd: python3 src/prepare.py
     deps:
     - data/raw
     - src/prepare.py
@@ -8,14 +8,14 @@ stages:
     - data/prepared/test.csv
     - data/prepared/train.csv
   train:
-    cmd: python src/train.py
+    cmd: python3 src/train.py
     deps:
     - data/prepared/train.csv
     - src/train.py
     outs:
     - model/model.joblib
   evaluate:
-    cmd: python src/evaluate.py
+    cmd: python3 src/evaluate.py
     deps:
     - model/model.joblib
     - src/evaluate.py
